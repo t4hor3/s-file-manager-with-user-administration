@@ -87,20 +87,20 @@ $(document).ready(function() {
 
 
 <?php
-$fp = fopen("carpetas/version", "r");
+$fp = fopen("folders/version", "r");
 $ver = fgets($fp);
 fclose($fp);
 
 
 							
-$dir = opendir("carpetas"); 
+$dir = opendir("folders"); 
 while ($file = readdir($dir)){
     if (is_dir($file)){}else{
 	if ($file !== "version"){
 	if ($file !== "index.php"){
 ?>       
 <div class="card js-masonry-item main-sidebar">
-     <a href="carpetas/<?php echo $file; ?>">
+     <a href="folders/<?php echo $file; ?>">
        <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
           <img style="width: 222px;" src="imagenes/carpeta.png" />
        </div>
@@ -112,7 +112,7 @@ while ($file = readdir($dir)){
 <?php
 
 if ($ver !== $version){
-	shell_exec("cp file.txt carpetas/".$file."/index.php");
+	shell_exec("cp file.txt folders/".$file."/index.php");
 	
 }}}
 
@@ -122,7 +122,7 @@ if ($ver !== $version){
 
 if ($ver !== $version){
 	echo "Script UPDATED";
-	$fp = fopen("carpetas/version", "w+");
+	$fp = fopen("folders/version", "w+");
 	fputs($fp, $version);
 	fclose($fp);
 	
