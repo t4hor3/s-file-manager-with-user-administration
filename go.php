@@ -1,6 +1,6 @@
 
 <?php
-$usuario = htmlentities($_POST['usuario']);
+$usuario = htmlentities($_POST['usern']);
 $nombre_fichero = 'folders/' . $usuario . '/index.php';
 
 if (file_exists($nombre_fichero)) {
