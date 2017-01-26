@@ -1,25 +1,7 @@
-<?php
-session_start();
-
-// Destruir todas las variables de sesión.
-$_SESSION = array();
-
-// Si se desea destruir la sesión completamente, borre también la cookie de sesión.
-// Nota: ¡Esto destruirá la sesión, y no la información de la sesión!
-if (ini_get("session.use_cookies")) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 42000,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-    );
-}
-
-// Finalmente, destruir la sesión.
-session_destroy();
-?>
-
-
 <!doctype html>
+<?php
+$version = "0.2";
+?>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -105,35 +87,48 @@ $(document).ready(function() {
 
 
 <?php
-								
-$directorio = opendir("carpetas"); //ruta actual
-while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro sucesivamente
-{
-    if (is_dir($archivo))//verificamos si es o no un directorio
-    {
-         //de ser un directorio lo envolvemos entre corchetes
-    }
-    else
-    {
+$fp = fopen("carpetas/version", "r");
+$ver = fgets($fp);
+fclose($fp);
+
+
+							
+$dir = opendir("carpetas"); 
+while ($file = readdir($dir)){
+    if (is_dir($file)){}else{
+	if ($file !== "version"){
+	if ($file !== "index.php"){
 ?>       
 <div class="card js-masonry-item main-sidebar">
-                    <a href="carpetas/<?php echo $archivo; ?>">
-                              <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
-                                    <img style="width: 222px;" src="imagenes/carpeta.png" />
-                              </div>
-                              <strong>Carpeta de <?php echo $archivo; ?></strong>
-                              <p></p>
-                    </a>
-                        </div>
+     <a href="carpetas/<?php echo $file; ?>">
+       <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
+          <img style="width: 222px;" src="imagenes/carpeta.png" />
+       </div>
+       <strong>Carpeta de <?php echo $file; ?></strong>
+       <p></p>
+     </a>
+</div>
 
-<?php	
-    }
+<?php
+
+if ($ver !== $version){
+	shell_exec("cp file.txt carpetas/".$file."/index.php");
+	
+}}}
+
+
+
+}}
+
+if ($ver !== $version){
+	echo "Script UPDATED";
+	$fp = fopen("carpetas/version", "w+");
+	fputs($fp, $version);
+	fclose($fp);
+	
 }
 
-?>
-           
-  
-             
+?>        
         </div>
     </div>
 </body>
