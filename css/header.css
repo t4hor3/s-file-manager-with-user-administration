@@ -1,0 +1,27 @@
+.main-header{
+    height:2.4rem
+}
+
+.main-header{
+    padding:11px;
+    background-color:rgba(34,172,255,.93);
+    position:fixed;top:0;
+    width:100%;
+    z-index:103;
+    box-shadow:0 1px 10px 0 rgba(50,50,50,.25)
+}
+
+
+#logo {
+    background-image: url('../img/logo.png');
+    height: 40px;
+    width: 300px;
+    
+}
+
+
+body {
+    margin: 0;
+    background-color: #f6f6f6;
+    
+}
