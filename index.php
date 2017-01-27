@@ -76,7 +76,7 @@ $(document).ready(function() {
             
  
                 <div class="card js-masonry-item main-sidebar">
-                    <a href="crear.html">
+                    <a href="create.html">
 		              <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
 			            <img style="width: 222px;" src="imagenes/nueva.jpg" />
 		              </div>
