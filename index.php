@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-$version = "0.2";
+$version = "0.3";
 ?>
 <html lang="es">
 <head>

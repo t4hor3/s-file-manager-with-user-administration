@@ -12,12 +12,14 @@ $allow_delete = true;
 /* Uncomment section below, if you want a trivial password protection */
 include('pass.php');
 
+$pa = htmlentities($_POST["p"]);
+$pass = md5($pa);
 
 session_start();
 if($_SESSION['_sfm_allowed']!==$PASSWORD) {
 	// sha1, and random bytes to thwart timing attacks.  Not meant as secure hashing.
 	$t = bin2hex(openssl_random_pseudo_bytes(10));	
-	if($_POST['p'] && sha1($t.$_POST['p']) === sha1($t.$PASSWORD)) {
+	if($pass && sha1($t.$pass) === sha1($t.$PASSWORD)) {
 		$_SESSION['_sfm_allowed'] = $PASSWORD;
 		header('Location: ?');
 	}
