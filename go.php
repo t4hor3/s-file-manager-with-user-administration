@@ -1,7 +1,7 @@
 
 <?php
 $usuario = htmlentities($_POST["usern"]);
-$nombre_fichero = 'folders/' . $usuario . '/index.php';
+$nombre_fichero = 'folders/' . $usuario . '/files/index.php';
 $p = htmlentities($_POST["pass"]);
 $pass = md5($p);
 
