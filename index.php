@@ -100,7 +100,7 @@ while ($file = readdir($dir)){
 	if ($file !== "index.php"){
 ?>       
 <div class="card js-masonry-item main-sidebar">
-     <a href="folders/<?php echo $file; ?>">
+     <a href="folders/<?php echo $file; ?>/files">
        <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
           <img style="width: 222px;" src="imagenes/carpeta.png" />
        </div>
@@ -112,7 +112,7 @@ while ($file = readdir($dir)){
 <?php
 
 if ($ver !== $version){
-	shell_exec("cp file.txt folders/".$file."/index.php");
+	shell_exec("cp file.txt folders/".$file."/files/index.php");
 	
 }}}
 

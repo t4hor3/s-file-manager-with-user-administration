@@ -13,7 +13,8 @@ if (file_exists($nombre_fichero)) {
 }	
 	
 shell_exec("mkdir folders/".$usuario);
-shell_exec("cp file.txt folders/".$usuario."/index.php");	
+shell_exec("mkdir folders/".$usuario . "/files");
+shell_exec("cp file.txt folders/".$usuario."/files/index.php");	
 $contenido = '$PASSWORD="' . $pass . '";'; 
 $file = fopen("folders/".$usuario."/pass.php", "w"); 
 fwrite($file, "<?php " . $contenido . " ?>" . PHP_EOL); 
