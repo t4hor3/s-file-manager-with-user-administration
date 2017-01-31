@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-$version = "0.3";
+$version = "0.4";
 ?>
 <html lang="es">
 <head>
@@ -63,7 +63,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<title>Inforyou</title>
+<title>ASIX</title>
 </head>
 <body data-lang="es">
     <header class="main-header clearfix">
