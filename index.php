@@ -132,6 +132,7 @@ if ($ver !== $version){
 ?>        
         </div>
     </div>
+    <div style="margin: 10px;"><a style="text-decoration: none; color: gray;" href="https://github.com/t4hor3">simple php filemanager with users by t4hor3 ®</a> </div>
 </body>
 
 </html>
