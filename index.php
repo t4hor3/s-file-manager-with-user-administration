@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-$version = "0.5";
+$version = "0.8";
 ?>
 <html lang="es">
 <head>
@@ -113,6 +113,7 @@ while ($file = readdir($dir)){
 
 if ($ver !== $version){
 	shell_exec("cp file.txt folders/".$file."/files/index.php");
+	shell_exec("cp unzip.txt folders/".$usuario."/unzip.php");	
 	
 }}}
 
