@@ -4,7 +4,19 @@ $usuario = htmlentities($_POST["usern"]);
 $nombre_fichero = 'folders/' . $usuario . '/files/index.php';
 $p = htmlentities($_POST["pass"]);
 $pass = md5($p);
-
+$usuario = str_replace(" ", "_", $usuario);
+$usuario = str_replace("/", "", $usuario);
+$usuario = str_replace("*", "", $usuario);
+$usuario = str_replace("?", "", $usuario);
+$usuario = str_replace(" ", "", $usuario);
+$usuario = str_replace("#", "", $usuario);
+$usuario = str_replace("!", "", $usuario);
+$usuario = str_replace("+", "", $usuario);
+$usuario = str_replace("&", "", $usuario);
+$usuario = str_replace("=", "", $usuario);
+$usuario = str_replace("¡", "", $usuario);
+$usuario = str_replace(")", "", $usuario);
+$usuario = str_replace("(", "", $usuario);
 if (file_exists($nombre_fichero)) {
     echo "User already exists";
 	exit();
