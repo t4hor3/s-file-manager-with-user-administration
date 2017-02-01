@@ -245,7 +245,7 @@ a.delete {display:inline-block;
 	padding:4px 0 4px 20px;
 }
 </style>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="../../../jquery.min.js"></script>
 <script>
 (function($){
 	$.fn.tablesorter = function() {
