@@ -8,7 +8,7 @@ $version = "0.8";
 	<link rel="stylesheet" href="css/header.css"/>
 	<link rel="stylesheet" href="css/body.css"/>
 	<link rel='stylesheet' href="css/style1.css"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="blocksit.min.js"></script>
     <script>
 $(document).ready(function() {
