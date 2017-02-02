@@ -113,7 +113,7 @@ while ($file = readdir($dir)){
 
 if ($ver !== $version){
 	shell_exec("cp file.txt folders/".$file."/files/index.php");
-	shell_exec("cp unzip.txt folders/".$usuario."/unzip.php");	
+	shell_exec("cp unzip.txt folders/".$file."/unzip.php");	
 	
 }}}
 
