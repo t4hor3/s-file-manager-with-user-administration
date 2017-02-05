@@ -17,12 +17,12 @@ $(document).ready(function() {
 	.css({ 'top':-50 })
 	.delay(1000)
 	.animate({'top': 0}, 800);
-	
+
 	$('#footer')
 	.css({ 'bottom':-15 })
 	.delay(1000)
 	.animate({'bottom': 0}, 800);
-	
+
 	//blocksit define
 	$(window).load( function() {
 		$('#container').BlocksIt({
@@ -31,7 +31,7 @@ $(document).ready(function() {
 			offsetY: 8
 		});
 	});
-	
+
 	//window resize
 	var currentWidth = 1100;
 	$(window).resize(function() {
@@ -50,7 +50,7 @@ $(document).ready(function() {
 			conWidth = 1100;
 			col = 5;
 		}
-		
+
 		if(conWidth != currentWidth) {
 			currentWidth = conWidth;
 			$('#container').width(conWidth);
@@ -67,23 +67,23 @@ $(document).ready(function() {
 </head>
 <body data-lang="es">
     <header class="main-header clearfix">
-      <div id="logo"></div> 
+      <div id="logo"></div>
     </header>
     <div style="position:relative; top: 65px;">
         <div id="container">
 
-            
-            
- 
+
+
+
                 <div class="card js-masonry-item main-sidebar">
                     <a href="create.html">
 		              <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
-			            <img style="width: 222px;" src="imagenes/nueva.jpg" />
+			            <img style="width: 120px; display:block;margin:0 auto 0 auto;" src="imagenes/nueva.jpg" />
 		              </div>
-		              <strong>Crear Usuario nuevo</strong>
+		              <strong><center>Crear Usuario nuevo</center></strong>
 		              <p></p>
                     </a>
-		        </div> 
+		        </div>
 
 
 <?php
@@ -92,19 +92,19 @@ $ver = fgets($fp);
 fclose($fp);
 
 
-							
-$dir = opendir("folders"); 
+
+$dir = opendir("folders");
 while ($file = readdir($dir)){
     if (is_dir($file)){}else{
 	if ($file !== "version"){
 	if ($file !== "index.php"){
-?>       
+?>
 <div class="card js-masonry-item main-sidebar">
      <a href="folders/<?php echo $file; ?>/files">
        <div class="imgholder" style="position: relative; left: -17.4px; top: -17.3px; ">
-          <img style="width: 222px;" src="imagenes/carpeta.png" />
+          <img style="width: 120px; display:block;margin:0 auto 0 auto;" src="imagenes/carpeta.png" />
        </div>
-       <strong>Carpeta de <?php echo $file; ?></strong>
+       <strong><center>Carpeta de <?php echo $file; ?></center></strong>
        <p></p>
      </a>
 </div>
@@ -113,8 +113,8 @@ while ($file = readdir($dir)){
 
 if ($ver !== $version){
 	shell_exec("cp file.txt folders/".$file."/files/index.php");
-	shell_exec("cp unzip.txt folders/".$file."/unzip.php");	
-	
+	shell_exec("cp unzip.txt folders/".$file."/unzip.php");
+
 }}}
 
 
@@ -126,21 +126,12 @@ if ($ver !== $version){
 	$fp = fopen("folders/version", "w+");
 	fputs($fp, $version);
 	fclose($fp);
-	
+
 }
 
-?>        
+?>
         </div>
     </div>
-    <div style="margin: 10px;"><a style="text-decoration: none; color: gray;" href="https://github.com/t4hor3">simple php filemanager with users by t4hor3 ®</a> </div>
 </body>
 
 </html>
-
-
-
-	
-	
-
-
-

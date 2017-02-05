@@ -1,28 +1,26 @@
 .card{
-    float:left;
-    overflow:hidden;
-    background-color:#fff;
-    -webkit-border-radius:10px;
-    border-radius:10px;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,.1),0 2px 5px 0 transparent;
-    -webkit-transition:box-shadow .25s ease;
-    -moz-transition:box-shadow .25s ease;
-    -o-transition:box-shadow .25s ease;
-    transition:box-shadow .25s ease;
-    width:188px;
+  float:left;
+  overflow:hidden;
+  background-color:#fff;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.1),0 2px 5px 0 transparent;
+  -webkit-transition:box-shadow .25s ease;
+  -moz-transition:box-shadow .25s ease;
+  -o-transition:box-shadow .25s ease;
+  transition:box-shadow .25s ease;
+  width:150px;
 	min-height:100px;
 	padding: 15px;
 	background:#fff;
 	margin:8px;
 	font-size:12px;
 	float:left;
-
 }
 
-
 #centrar {
-    position:relative; 
-    top: 65px; 
+    position:relative;
+    top: 65px;
     margin: 0 auto;
     width: 900px;
 }
@@ -32,10 +30,10 @@
 	width:1100px;
 	margin:0 auto 25px;
 	padding-bottom: 10px;
-	
+
 }
 .card{
-	width:188px;
+	width:150px;
 	min-height:100px;
 	padding: 15px;
 	background:#fff;
@@ -45,7 +43,7 @@
 	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-moz-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
-	
+
 	-webkit-transition: top 1s ease, left 1s ease;
 	-moz-transition: top 1s ease, left 1s ease;
 	-o-transition: top 1s ease, left 1s ease;
