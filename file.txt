@@ -1,3 +1,4 @@
+
 <?php
 
 /********************************
@@ -187,13 +188,14 @@ $MAX_UPLOAD_SIZE = min(asBytes(ini_get('post_max_size')), asBytes(ini_get('uploa
      folderToZip($sourcePath, $z, strlen("$parentPath/"));
      $z->close();
  }
- 
 
 ?>
 <!DOCTYPE html>
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-
+	<link href="../../../img/favicon.png" rel="icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="../../../css/bootstrap.min.css">
 <style>
 body {font-family: "lucida grande","Segoe UI",Arial, sans-serif; font-size: 14px;width:1024;padding:1em;margin:0;}
 th {font-weight: normal; color: #1F75CC; background-color: #F0F9FF; padding:.5em 1em .5em .2em; 
@@ -446,38 +448,47 @@ $(function(){
 })
 </script>
 </head><body>
+	<div class="container">
+    <h3>QCloud - Cloud</h3>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="../../../">Login users</a></li>
+          <li><a href="../../../create.html">Create user</a></li>
+          <li><a href="../../../../">Back</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="list-group">
+	<li class="list-group-item">
 <div id="top">
    <?php if($allow_upload == true): ?>
 	<form action="?" method="post" id="mkdir" />
-		<label for=dirname>Create New Folder</label><input id=dirname type=text name=name value="" />
-		<input type="submit" value="create" />
+		<label for=dirname>Create new folder</label><input id=dirname type=text name=name value="" />
+		<input class="btn btn-default btn-sm" type="submit" value="create" />
 	</form>
-	<div id="mkdir" style="position: relative; top: -20px; left: 30px;"> 
-		<a href="../unzip.php">unzip</a>
-	</div>
 
    <?php endif; ?>
 
    <?php if($allow_upload == true): ?>
-
-	<div id="file_drop_target">
-		Drag Files Here To Upload
-		<b>or</b>
-		<input type="file" multiple />
-	</div>
+   
+		<input class="btn btn-default" type="file" multiple />
+		
    <?php endif; ?>
 	<div id="breadcrumb">&nbsp;</div>
 </div>
 
 <div id="upload_progress"></div>
-<table id="table"><thead><tr>
+<br>
+<table class="table" id="table"><thead><tr>
 	<th>Name</th>
 	<th>Size</th>
 	<th>Modified</th>
 	<th>Permissions</th>
 	<th>Actions</th>
 </tr></thead><tbody id="list">
-
 </tbody></table>
-<footer>simple php filemanager by <a href="https://github.com/jcampbell1">jcampbell1</a></footer>
+</li>
+</ul>
+</div>
 </body></html>
